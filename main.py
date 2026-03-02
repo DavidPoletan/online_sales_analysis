@@ -17,9 +17,10 @@ while True:
     print("1) Show a list of all current products")
     print("2) Show total price of all current products")
     print("3) Add a new product to the list")
-    print("4) Exit\n")
+    print("4) Remove a product from the list")
+    print("5) Exit\n")
 
-    choice = input("Choose an option (1-4): ").strip()
+    choice = input("Choose an option (1-5): ").strip()
     print()
 
     if choice == "1":
@@ -49,6 +50,13 @@ while True:
 
 
     elif choice == "4":
+
+        to_be_removed = input("Enter the name of the product you wish to remove: ").strip()
+        productsList.remove_product(to_be_removed)
+        print("\n===============\n\n")
+
+
+    elif choice == "5":
 
         print("\nGoodbye!\n")
         break

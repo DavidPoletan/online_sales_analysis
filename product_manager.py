@@ -35,3 +35,12 @@ class ProductManager(Product):
             totalPrice += (product.price * product.quantity)
 
         return totalPrice
+    
+
+    def remove_product(self, to_be_removed):
+
+        for product in self.products_list:
+            
+            if product.name.lower() == to_be_removed.lower():
+
+                self.products_list.remove(product)
