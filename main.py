@@ -8,35 +8,22 @@ product2 = Product("Keyboard", 57.95, 21)
 product3 = Product("Mouse", 32, 17)
 product4 = Product("Headphones", 91.99, 7)
 
+product1.update_quantity(27); product4.update_quantity(13)
+
 productsList.add_product(product1); productsList.add_product(product2); productsList.add_product(product3); productsList.add_product(product4)
 
 print("===== Product Manager =====")
 
 while True:
 
-    print("1) Show a list of all current products")
-    print("2) Show total price of all current products")
-    print("3) Add a new product to the list")
-    print("4) Remove a product from the list")
-    print("5) Exit\n")
+    print("1) Add a new producct to the current products list")
+    print("2) Remove a existing product from the current products list")
+    print("3) Exit\n")
 
-    choice = input("Choose an option (1-5): ").strip()
+    choice = input("Choose an option (1-3): ").strip()
     print()
 
     if choice == "1":
-
-        productsList.display_list()
-        print("\n===============\n\n")
-
-
-    elif choice == "2":
-
-        print(f"Total price of all current products is: {productsList.total_price():.2f}")
-        print("\n===============\n\n")
-
-
-
-    elif choice == "3":
 
         print("Adding a new product: ")
         new_product_name =     input("New product name:     ")
@@ -49,14 +36,14 @@ while True:
         print("\n===============\n\n")
 
 
-    elif choice == "4":
+    elif choice == "2":
 
         to_be_removed = input("Enter the name of the product you wish to remove: ").strip()
         productsList.remove_product(to_be_removed)
         print("\n===============\n\n")
 
 
-    elif choice == "5":
+    elif choice == "3":
 
         print("\nGoodbye!\n")
         break
